@@ -1,0 +1,33 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Books</h1>
+
+  <div id="books">
+    <% @books.each do |book| %>
+    <div class="card" style="width: 100%;">
+      <%= render book %>
+      <div style="margin-left: 10px;">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-9">
+              <p class="card-text">
+                <%= book.short_desc %>
+              </p>
+            </div>
+            <div class="col-md-3 float-right">
+              <p>
+                <%= link_to "More details", book, class:"btn btn-primary" %>
+              </p>
+              <p>
+                <%= link_to "Assign to Student", book, class:"btn btn-primary" %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <% end %>
+  </div>
+
+<%= link_to "New book", new_book_path %>

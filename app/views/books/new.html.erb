@@ -1,0 +1,12 @@
+<div class="card">
+  <h3 class="card-header">Add new book</h3>
+  <div class="card-body">
+    <p class="card-text">
+      <%= render "form", book: @book %>
+    </p>
+  </div>
+</div>
+
+<div>
+  <%= link_to "Back to books", books_path %>
+</div>

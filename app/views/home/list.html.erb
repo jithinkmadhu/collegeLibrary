@@ -1,0 +1,14 @@
+<h2>List of Students</h2>
+
+<form method="post" action="/users">
+	<select class="form-select" aria-label="Default select example">
+	  <option selected>select student</option>
+	  <% @students.each do |student| %>
+	  	<option value="1">
+	  		<%= student.name %>
+	  	</option>
+	  <% end %>
+	</select>
+<br/>
+<input type="submit" name="Sign up" value="Assign" class="btn btn-primary">
+</form>
